@@ -386,9 +386,9 @@ header .call-to-action a:hover {
         font-size: 95%;
     }
 
-    /* #1. Header Section */
-    header .heading-area h1{
-        font-size: 4.5em;
+    /* 1. Header Section */
+    header .heading-area {
+        font-size: 65%;
     }
 
     /* 2. About Section */
@@ -426,7 +426,10 @@ header .call-to-action a:hover {
 /* Small Phones */
 @media only screen and (max-width: 500px) {
     body {
-        font-size: 80%;
+        font-size: 95%;
+    }
+    p {
+        line-height: 1.5em;
     }
 }
 
