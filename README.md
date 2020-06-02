@@ -1,2 +1,2 @@
-# mogo-2
+# mogo
 PSD to HTML
