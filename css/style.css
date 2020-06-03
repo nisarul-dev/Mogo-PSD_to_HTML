@@ -7,11 +7,10 @@
         1.2 Heading area
         1.3 Call to Action
     2. About Section
-        2.1 Checkbox Area
-        2.2 All Products Area
-    3. Serveces Section
-        3.1 Men Section
-        3.2 Women Section
+        2.1 Section Heading
+        2.2 Photo Button Area
+        2.3 Count Up Area
+    3. Services Section
     4. About Area
     5. Footer Area
         5.1 Advertisement Area
@@ -112,26 +111,28 @@ header .header-top .main-menu ul li a:hover {
 header .header-top .main-menu ul> a {
     display: none;
 }
+
 header .header-top span {
     display: none;
 }
 
 /* 1.2 Heading area */
-header .heading-area p{
+header .heading-area p {
     font-family: 'Kaushan Script', cursive;
     color: white;
     text-align: center;
     font-size: 3em;
-    margin-bottom: 24px;
+    margin-bottom: .5em;
 }
 
-header .heading-area h1{
+header .heading-area h1 {
     font-family: 'Montserrat', sans-serif;
     color: white;
     text-align: center;
     text-transform: uppercase;
     font-size: 6em;
     line-height: 0.9em;
+    margin: 0;
 }
 
 /* 1.3 Call to Action */
@@ -164,9 +165,10 @@ header .call-to-action a:hover {
 /* ================== 2. About Section ================== */
 
 .about-section {
-    padding: 6em 0;
+    padding: 6em 0 0 0;
 }
 
+/* 2.1 Section Heading */
 .about-section .text-area p {
     color: #999999;
     text-align: center;
@@ -174,40 +176,41 @@ header .call-to-action a:hover {
     margin: 0 auto 4em;
 }
 
-.flex-container {
+/* 2.2 Photo Button Area */
+.about-section .container .flex-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.flex-container .flex-item {
+.about-section .container .flex-container .flex-item {
     background: #95e1d3;
     width: 30%;
 }
 
-.flex-container .flex-item .slide-up {
+.about-section .container .flex-container .flex-item .slide-up {
     position: relative;
     overflow: hidden;
     
     transition: 500ms;
 }
 
-.flex-container .flex-item .slide-up img {
+.about-section .container .flex-container .flex-item .slide-up img {
     display: block;
     width: 100%;
 }
 
-.flex-container .flex-item .slide-up .icon-text a {
+.about-section .container .flex-container .flex-item .slide-up .icon-text a {
     text-decoration: none;
     color: white;
 }
 
-.flex-container .flex-item .slide-up .icon-text a i {
+.about-section .container .flex-container .flex-item .slide-up .icon-text a i {
     font-size: 1.25em;
     margin-bottom: 5px;
 }
 
-.flex-container .flex-item .slide-up .icon-text a p {
+.about-section .container .flex-container .flex-item .slide-up .icon-text a p {
     width: 150px;
     color: white;
     font-weight: bold;
@@ -215,9 +218,7 @@ header .call-to-action a:hover {
     text-transform: uppercase;
 }
 
-
-
-.flex-container .flex-item .slide-up .icon-text {
+.about-section .container .flex-container .flex-item .slide-up .icon-text {
     opacity: 0;
     text-align: center;
     position: absolute;
@@ -229,12 +230,46 @@ header .call-to-action a:hover {
     transition: 300ms;
 }
 
-.flex-container .flex-item:hover .slide-up .icon-text {
+.about-section .container .flex-container .flex-item:hover .slide-up .icon-text {
     opacity: 1;
 }
 
-.flex-container .flex-item:hover .slide-up {
+.about-section .container .flex-container .flex-item:hover .slide-up {
     transform: translate(-10px , -10px);
+}
+
+/* 2.3 Count Up Area */
+.about-section .count-up-area {
+    background-color: #95e1d3;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 75px;
+}
+
+.about-section .count-up-area .flex-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.about-section .count-up-area .flex-container .flex-item {
+    width: 20%;
+    padding: 3em .5em;
+    border-right: 2px solid #b5eae0;
+}
+.about-section .count-up-area .flex-container .flex-item:last-child {
+    border-right: none;
+}
+.about-section .count-up-area .flex-container .flex-item p:first-child {
+    margin-bottom: 0.875em;
+}
+.about-section .count-up-area .flex-container .flex-item p .counter {
+    font-weight: bold;
+    font-size: 4em;
+}
+.about-section .count-up-area .flex-container .flex-item p .title {
+    font-size: 1em;
 }
 
 /* ================== 3. Serveces Section ================== */
@@ -338,7 +373,7 @@ header .call-to-action a:hover {
         color: rgba(252, 227, 138, 0.8);
     }
 
-    /* heding area */
+    /* 1. Header Section */
     header .header-top .main-menu ul {
         display: block;
         font-family: 'Montserrat', sans-serif;
@@ -358,6 +393,21 @@ header .call-to-action a:hover {
     header .header-top .main-menu ul li a:hover {
         color: #fce38a;
         border-bottom: 0px;
+    }
+
+    /* 2. About Section */
+    .about-section .count-up-area .flex-container .flex-item {
+        width: 50%;
+        border-right: 2px solid #b5eae0;
+        border-bottom: 2px solid #b5eae0;
+    }
+
+    .about-section .count-up-area .flex-container .flex-item:nth-child(even) {
+        border-right: none;
+    }
+
+    .about-section .count-up-area .flex-container .flex-item:last-child {
+        border: none;
     }
 
     /* 3. Serveces Section */
@@ -392,9 +442,15 @@ header .call-to-action a:hover {
     }
 
     /* 2. About Section */
-    .flex-container .flex-item {
+    .about-section .container .flex-container .flex-item {
         width: 80%;
         margin-bottom: 2.25rem;
+    }
+
+    .about-section .count-up-area .flex-container .flex-item {
+        width: 100%;
+        padding: 4em .5em 3em;
+        border-right: none;
     }
 
     /* 3. Serveces Section */
